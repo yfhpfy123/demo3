@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void registerUser(User user) {
         repo.save(user);
-        gameData.pushEvent(user.getChatID(), "Register");
+        gameData.pushEvent(user.getId(), "Register");
     }
 
     @Override

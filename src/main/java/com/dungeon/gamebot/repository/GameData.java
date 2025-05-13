@@ -1,10 +1,14 @@
 package com.dungeon.gamebot.repository;
 
+import lombok.Data;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Component
 public class GameData {
     private final Map<Long, Deque<String>> gameStage = new ConcurrentHashMap<>();
 
